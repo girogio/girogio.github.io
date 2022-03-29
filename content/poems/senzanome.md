@@ -11,7 +11,7 @@ TocOpen: false
 draft: false
 hidemeta: false
 comments: false
-description: "A poem written around the beginning of 2022. First writing in Italian, first poem read to public, at the Lords private signing event on the 29th of March."
+description: "A poem written around the beginning of 2022. First writing in Italian, first poem read to public, at the Lords private signing event on the 28th of March."
 disableHLJS: true # to disable highlightjs
 disableShare: true
 disableHLJS: false

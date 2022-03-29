@@ -1,0 +1,146 @@
+baseURL: "https://grigolo.mt"
+title: Giorgio Grigolo
+paginate: 5
+theme: gMod
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+googleAnalytics: UA-123-45
+disqusShortname: disqus_hn6OOxXi93
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: Giorgio Grigolo
+  math: true
+  description: " "
+  keywords: [Blog, Portfolio, Arch-Linux, Mathematics, Computer Science]
+  author: Me
+  # author: ["Me", "You"] # multiple authors
+  images: ["<link or path of image for opengraph, twitter-cards>"]
+  DateFormat: "January 2, 2006"
+  defaultTheme: dark # dark, light
+  disableThemeToggle: false
+  ShowReadingTime: false
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: false
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
+
+  assets:
+    # disableHLJS: tr2ue # to disable highlight.js
+    # disableFingerprinting: true
+    favicon: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/LetterG.svg/800px-LetterG.svg.png"
+    favicon16x16: "<link / abs url>"
+    favicon32x32: "<link / abs url>"
+    apple_touch_icon: "<link / abs url>"
+    safari_pinned_tab: "<link / abs url>"
+
+  label:
+    text: "Giorgio Grigolo"
+    # icon: /apple-touch-icon.png
+    iconHeight: 35
+
+  # profile-mode
+  profileMode:
+    enabled: true # needs to be explicitly set
+    title: Giorgio Grigolo
+    subtitle: "Student or something"
+    imageUrl: "pfp.png"
+    imageWidth: 250
+    imageHeight: 265
+    imageTitle: my image
+    buttons:
+      - name: Talks
+        url: talks
+      - name: Tags
+        url: tags
+
+  socialIcons:
+    - name: email
+      url: "mailto://giorgiogrigolo03@gmail.com"
+    - name: facebook
+      url: "https://facebook.com/girogio2103"
+    - name: instagram
+      url: "https://instagram.com/il_grig"
+    - name: spotify
+      url: "https://sptfy.com/giorgiogrigolo"
+    - name: github
+      url: "https://github.com/girogio"
+
+  analytics:
+    google:
+      SiteVerificationTag: "XYZabc"
+    bing:
+      SiteVerificationTag: "XYZabc"
+    yandex:
+      SiteVerificationTag: "XYZabc"
+
+  cover:
+    hidden: true # hide everywhere but not in structured data
+    hiddenInList: true # hide on list pages and home
+    hiddenInSingle: true # hide on single page
+
+  editPost:
+    URL: "https://github.com/girogio/girogio.github.io/edit/main/content"
+    Text: "Suggest Changes" # edit text
+    appendFilePath: true # to append file path to Edit link
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+menu:
+  main:
+    - identifier: talks
+      name: talks
+      url: /talks/
+      weight: 10
+    - identifier: tags
+      name: tags
+      url: /tags/
+      weight: 40
+    - identifier: schedule
+      name: schedule
+      url: /schedule/
+      weight: 30
+    - identifier: search
+      name: search
+      url: /search/
+      weight: 31
+
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON # is necessary
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+# pygmentsUseClasses: true
+# markup:
+#     highlight:
+#         # anchorLineNos: true
+#         codeFences: true
+#         guessSyntax: true
+#         lineNos: true
+#         style: monokai

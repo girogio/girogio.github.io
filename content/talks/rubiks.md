@@ -48,4 +48,9 @@ It is also worth nothing that performing a move from two different states, is id
 
 $$\begin{aligned}o(\mathcal{G_{\tiny 3}}) &= \frac{12! \times 8! \times 3^8 \times 2^{12}}{2 \times 3} \\\\\\\\ &= 43, 252, 003, 274,489,856,000 \end{aligned}$$
 
+## Resources:
+---
+ - <a href="/rubiks.pdf" download>Slides</a>
+ - [Exercise Sheet by Janet Chen](https://people.math.harvard.edu/~jjchen/docs/Group%20Theory%20and%20the%20Rubik's%20Cube.pdf)
+ - [Jaap's Puzzle Page](https://www.jaapsch.net/puzzles/theory.htm)
 

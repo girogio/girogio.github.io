@@ -13,8 +13,7 @@ hidemeta: false
 math: true
 comments: false
 description: "A short talk given during a 'Quick fire Talk' organized by the Malta Mathematical Society."
-canonicalURL: "https://canonical.url/to/page"
-hideSummary: true
+hideSummary: false
 searchHidden: false
 ShowReadingTime: false
 ShowBreadCrumbs: true

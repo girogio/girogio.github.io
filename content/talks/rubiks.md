@@ -32,9 +32,9 @@ cover:
 
 ## Main Results:
 ---
-**Definition:** Let $\mathcal{G_{\tiny 3}}$ be the set of possible 3 by 3 rubik's cube distinct states (_i.e. no corner twists, no sticker swapping etc._ ) reachable by a move $M$.
+**Definition:** Let $\mathcal{G_{\tiny 3}}$ be the set of possible 3 by 3 rubik's cube distinct states (<i>i.e. no corner twists, no sticker swapping etc.</i>) reachable by a move $M$.
 
- We show that $\mathcal{G_{\tiny 3}}$ is a group under _move concatenation_ which is defined as follows:
+ We show that $\mathcal{G_{\tiny 3}}$ is a group under <i>move concatenation</i> which is defined as follows:
 
 <center>
 If $M_{\tiny 1}$ and $M_{\tiny 2}$ are moves (<i>or thereby sequences of them</i>) then $M_{\tiny 1} * M_{\tiny 2}$ is simply the execution of move $M_{\tiny 1}$ followed by that of $M_{\tiny 2}$. 

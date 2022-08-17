@@ -15,10 +15,12 @@ ShowPostNavLinks: false
 
 <br />
 
-Here is my PGP public key. You can use it to verify any digitally signed files by me, or to communicate with me privately and securely. My email address is `giorgio (at) grigolo (dot) mt`.
+Here is my PGP public key. You can use it to verify any digitally signed files by me, or to communicate with me privately and securely. 
+
+My email address is `giorgio (at) grigolo (dot) mt`.
 
 
-<br /><br />
+<br />
 Click the text to copy it.
 <textarea readonly cols="80" onclick="this.select();document.execCommand('copy');alert('Copied to clipboard.')" style="color:white;width:100%;font-family:monospace;text-align:center;display:block;height:400px;resize:none;background:#2E2E33" >
 -----BEGIN PGP PUBLIC KEY BLOCK-----
@@ -77,7 +79,6 @@ chQyh4UIFxeCO6T3xX+XxGi+twH9Xiw4dqV0//j2rpYEQnY=
 -----END PGP PUBLIC KEY BLOCK-----
 </textarea>
 
-<br />  
 <br />
 
 ## How to send PGP encrypted emails

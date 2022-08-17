@@ -71,14 +71,10 @@ params:
   socialIcons:
     - name: email
       url: "mailto:giorgio@grigolo.mt"
-    - name: facebook
-      url: "https://facebook.com/girogio2103"
-    - name: instagram
-      url: "https://instagram.com/il_grig"
-    - name: spotify
-      url: "https://sptfy.com/giorgiogrigolo"
     - name: github
       url: "https://github.com/girogio"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/girogio/"
 
   cover:
     hidden: true # hide everywhere but not in structured data

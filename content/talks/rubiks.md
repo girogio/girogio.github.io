@@ -17,7 +17,6 @@ hideSummary: false
 searchHidden: false
 ShowReadingTime: false
 ShowBreadCrumbs: true
-ShowPostNavLinks: true
 cover:
     image: "<image path/url>" # image path/url
     alt: "<alt text>" # alt text

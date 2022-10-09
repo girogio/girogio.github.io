@@ -63,7 +63,7 @@ params:
     imageUrl: "pfp.png"
     imageWidth: 270
     imageHeight: 265
-    imageTitle: my image
+    imageTitle: me
     buttons:
       # - name: Talks
       #   url: talks
@@ -95,6 +95,10 @@ params:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
+    - identifier: info
+      name: info
+      url: /info/
+      weight: 1
     - identifier: talks
       name: talks
       url: /talks/

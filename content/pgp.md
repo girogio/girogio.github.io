@@ -17,7 +17,7 @@ ShowPostNavLinks: false
 
 Here is my PGP public key. You can use it to verify any digitally signed files by me, or to communicate with me privately and securely. 
 
-My email address is `giorgio (at) grigolo (dot) mt`.
+My email address is `giorgio (at) grigolo (dot) mt`
 
 
 <br />
@@ -76,8 +76,7 @@ KWGkemcvy3LC87KhdESyb9FrUS/8atu+jMeC4r36rHA29He+LQyHagACCzyZyneM
 qQKv2XsZA1aC3bwxW/7qlakKdNLK342xK3zEoUF3qVPshaGFlYZrSyL25ILd4+Tu
 chQyh4UIFxeCO6T3xX+XxGi+twH9Xiw4dqV0//j2rpYEQnY=
 =pucF
------END PGP PUBLIC KEY BLOCK-----
-</textarea>
+-----END PGP PUBLIC KEY BLOCK-----</textarea>
 
 <br />
 

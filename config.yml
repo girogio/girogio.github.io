@@ -8,7 +8,6 @@ buildDrafts: false
 buildFuture: false
 buildExpired: false
 
-
 minify:
   disableXML: true
   minifyOutput: true
@@ -103,6 +102,10 @@ menu:
       name: talks
       url: /talks/
       weight: 1
+    - identifier: writeups
+      weight: 1
+      name: writeups
+      url: /writeups/
     # - identifier: tags
     #   name: tags
     #   url: /tags/

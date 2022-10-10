@@ -1,7 +1,6 @@
 from qiskit import QuantumCircuit, assemble, Aer
 sim = Aer.get_backend('aer_simulator')
 
-
 def get_state(x):
     l = [0] * 2**len(x)
     l[int(x, 2)] = 1

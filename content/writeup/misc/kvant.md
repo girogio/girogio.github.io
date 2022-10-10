@@ -83,16 +83,17 @@ def encode_2(initial_state):
     state = sim.run(qobj).result()
     return list(state.get_statevector().real.astype(int))
 ```
-This time however, a `.cx()` gate (`CNOT`) is being applied to the 2 qubits – the 0th and 1st bit being the control and target bits respectively. The `CNOT` gate simply flips the target bit, only if the control bit is set to 1 and does nothing otherwise. Fortunately, mathematics comes to the rescue with a handy matrix definition for the `CNOT` gate:
+This time however, a `.cx()` gate (`CNOT`) is being applied to the 2 qubits – the 0th and 1st bit being the target and control bits respectively (*damn qiskit for inverting their order*). The `CNOT` gate simply flips the target bit, only if the control bit is set to 1 and does nothing otherwise. Fortunately, mathematics comes to the rescue with a handy matrix definition for the `CNOT` gate:
 
-$$\verb|CNOT| := \begin{pmatrix} 1&0&0&0\\\\0&1&0&0\\\\0&0&0&1\\\\0&0&1&0\\\\\end{pmatrix}$$
+$$\verb|CNOT| := \begin{pmatrix} 1&0&0&0\\\\0&0&0&1\\\\0&0&1&0\\\\0&1&0&0\\\\\end{pmatrix}$$
 
-Its effect on a $1\times 4$ matrix $M$ is replicable by swapping the last and second to last entries of $M$, i.e.
-$$\verb|CNOT| \begin{pmatrix}a\\\\b\\\\c\\\\d\end{pmatrix} = \begin{pmatrix} 1&0&0&0\\\\0&1&0&0\\\\0&0&0&1\\\\0&0&1&0\\\\\end{pmatrix} \begin{pmatrix}a\\\\b\\\\c\\\\d\end{pmatrix}= \begin{pmatrix}a\\\\b\\\\d\\\\c\end{pmatrix}$$
+Its effect on a $1\times 4$ matrix $M$ is replicable by swapping the $1^\text{st}$ and $3^\text{rd}$  entries of $M$ (*starting from 0*), i.e.
+
+$$\verb|CNOT| \begin{pmatrix}a\\\\b\\\\c\\\\d\end{pmatrix} = \begin{pmatrix} 1&0&0&0\\\\0&0&0&1\\\\0&0&1&0\\\\0&1&0&0\\\\\end{pmatrix} \begin{pmatrix}a\\\\b\\\\c\\\\d\end{pmatrix}= \begin{pmatrix}a\\\\d\\\\c\\\\b\end{pmatrix}$$
 
 An example with a prepared state $\ket{11}$:
 
-$$\verb|CNOT| \ket{11} = \verb|CNOT| \begin{pmatrix}0\\\\0\\\\0\\\\1\end{pmatrix} = \begin{pmatrix}0\\\\0\\\\1\\\\0\end{pmatrix} = \verb|[0,0,1,0]|$$
+$$\verb|CNOT| \ket{11} = \verb|CNOT| \begin{pmatrix}0\\\\0\\\\0\\\\1\end{pmatrix} = \begin{pmatrix}0\\\\1\\\\0\\\\0\end{pmatrix} = \verb|[0,1,0,0]|$$
 
 ### `encode_3()`
 
@@ -144,30 +145,66 @@ Consider the encryption with the following string – `'a'`
 
 ```text
 'a' 
+```
 
 ↓ str2bin()
-
+```text
 01100001 
+```
 
 ↓ encode_1()
 
+```text
 not |0> not |1> not |1> not |0> not |0> not |0> not |0> not |1>
+```
 
 ↓ computing!
-
+```text
 |1> |0> |0> |1> |1> |1> |1> |0> 
+```
 
 ↓ expanding the states!
-
+```text
 01 10 10 01 01 01 01 10 
+```
 
-↓ encode_2()
+↓ encode_2() `remember, first bit is target and second bit is control`
+```text
+cnot |01> cnot |10> cnot |10> ...
+```
 
-cnot |0> cnot |10> ...
+↓text computing!
+```text
+|11> |10> |10> ...
+```
 
+↓ expanding the states!
+```text
 0001 0010 0010 0001 0001 0001 0001 0010
+```
+
+↓ group every 3 bits (*last one is wrong due to the short length of the message*)
+```text
+000 100 100 010 000 100 010 001 000 100 10  
+```
 
 ↓ encode_3()
-
-10000000000010000000100000100000100000000000100000100000010000001
+```text
+ccnot |000> ccnot |100> ccnot |100> ...
 ```
+
+↓ computing!
+```text
+|000> |100> |100> ...
+```
+
+↓ expanding the states!
+```text
+10000000 00001000 0000100 ...
+```
+## Solution!
+
+The output here observed matches exactly the `str2bin()` of the encrypted message. The encryption is reversible! All we need to do is go backwards, swap the right entries, collapse the states, use `bin2str()` and we're done!
+
+## decrypt_3()
+

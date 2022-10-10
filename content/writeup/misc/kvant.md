@@ -46,6 +46,8 @@ def bin2str(a):
 ```
 <br/>
 
+### `encode_1()`
+
 
 Now comes the interesting part. The following function expects an initial state vector and creates a single qubit quantum circuit. Thus the initial state must be an array of size $2^1$.
 
@@ -67,6 +69,8 @@ $$\verb|NOT| \ket{1} = \verb|NOT| \begin{pmatrix} 0\\\\1\end{pmatrix} = \begin{p
 
 <br/>
 
+### `encode_2()`
+
 The second encoding function happens to be a 2-qubit circuit, hence expecting a state vector of size $2^2$ as an input.
 
 ```py
@@ -86,7 +90,84 @@ $$\verb|CNOT| := \begin{pmatrix} 1&0&0&0\\\\0&1&0&0\\\\0&0&0&1\\\\0&0&1&0\\\\\en
 Its effect on a $1\times 4$ matrix $M$ is replicable by swapping the last and second to last entries of $M$, i.e.
 $$\verb|CNOT| \begin{pmatrix}a\\\\b\\\\c\\\\d\end{pmatrix} = \begin{pmatrix} 1&0&0&0\\\\0&1&0&0\\\\0&0&0&1\\\\0&0&1&0\\\\\end{pmatrix} \begin{pmatrix}a\\\\b\\\\c\\\\d\end{pmatrix}= \begin{pmatrix}a\\\\b\\\\d\\\\c\end{pmatrix}$$
 
-Some exapmles with prepared states:
+An example with a prepared state $\ket{11}$:
+
+$$\verb|CNOT| \ket{11} = \verb|CNOT| \begin{pmatrix}0\\\\0\\\\0\\\\1\end{pmatrix} = \begin{pmatrix}0\\\\0\\\\1\\\\0\end{pmatrix} = \verb|[0,0,1,0]|$$
+
+### `encode_3()`
+
+The third encoding function is a 3-qubit circuit, hence expecting a state vector of size $2^3$ as an input.
+
+```py
+def encode_3(initial_state):
+    qc = QuantumCircuit(3)
+    qc.initialize(initial_state)
+    qc.ccx(0, 1, 2)
+    qc.save_statevector()
+    qobj = assemble(qc)
+    state = sim.run(qobj).result()
+    return list(state.get_statevector().real.astype(int))
+```
+
+The last encoding function is a `.ccx()` gate (`CCNOT`), that acts on 3 qubits. The `CCNOT` gate is a controlled version of the `CNOT` gate, i.e. it flips the target bit only if **both control bits** are set to 1 and does nothing otherwise. The `CCNOT` gate is defined as follows:
+
+$$\verb|CCNOT| = \begin{pmatrix}
+1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\\\
+0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\\\
+0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 \\\\
+0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 \\\\
+0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\\\
+0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 \\\\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 \\\\
+0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 \\\\\end{pmatrix}$$
+
+Again, it can be seen as swapping the last and second to last entries of a $1\times 8$ matrix $M$ like so:
+
+$$\verb|CCNOT| \begin{pmatrix}a\\\\b\\\\c\\\\d\\\\e\\\\f\\\\g\\\\h\end{pmatrix} = \begin{pmatrix}
+1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\\\
+0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\\\
+0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 \\\\
+0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 \\\\
+0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\\\
+0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 \\\\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 \\\\
+0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 \\\\\end{pmatrix} \begin{pmatrix}a\\\\b\\\\c\\\\d\\\\e\\\\f\\\\g\\\\h\end{pmatrix}= \begin{pmatrix}a\\\\b\\\\c\\\\d\\\\e\\\\f\\\\h\\\\g\end{pmatrix}$$ 
+
+### encrypt_1/2/3()
+
+The `encrypt_1/2/3()` functions are the ones that actually perform the encryption. The first one iterates over every bit, applying the `encode_1()` to it and concatenating all the entries of the resulting state vectors. The second and third functions do the same, but with the `encode_2()` and `encode_3()` functions over every pairs and triples of bits respectively.
+
+**Note:** At every step, the length of the encrypted message doubles!
+
+Consider the encryption with the following string – `'a'`
 
 
-$$\verb|CNOT| \ket{11} = \verb|CNOT| \begin{pmatrix}0\\\\0\\\\0\\\\1\end{pmatrix} = \begin{pmatrix}0\\\\0\\\\1\\\\0\end{pmatrix} $$
+```text
+'a' 
+
+↓ str2bin()
+
+01100001 
+
+↓ encode_1()
+
+not |0> not |1> not |1> not |0> not |0> not |0> not |0> not |1>
+
+↓ computing!
+
+|1> |0> |0> |1> |1> |1> |1> |0> 
+
+↓ expanding the states!
+
+01 10 10 01 01 01 01 10 
+
+↓ encode_2()
+
+cnot |0> cnot |10> ...
+
+0001 0010 0010 0001 0001 0001 0001 0010
+
+↓ encode_3()
+
+10000000000010000000100000100000100000000000100000100000010000001
+```

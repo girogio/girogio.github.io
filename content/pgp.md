@@ -24,6 +24,7 @@ My email address is `girogio (at) duck (dot) com`
 Click the text to copy it.
 <textarea readonly cols="80" onclick="this.select();document.execCommand('copy');alert('Copied to clipboard.')" style="font-size:15px;color:white;width:100%;font-family:monospace;text-align:center;display:block;height:400px;resize:none;background:#2E2E33" >
 -----BEGIN PGP PUBLIC KEY BLOCK-----
+&#13;
 mQGNBGN003sBDADPrsKH2R6HP9udPjwVDOpLMvVKLf5c/muGpxOL7KnHBfOUuHBn
 K3xCCFnNG1HhmZLK2neKM4zT7AfG1xdyKDnn4dQJHhasVZYqr8C+LLx4fv6P2qtg
 3KbCIrQKzE0AgU+m8bJ9ZyZxZbmDHBYQZ+QX3VccQhocjB+bPMV+WlAUpBqxeSCn

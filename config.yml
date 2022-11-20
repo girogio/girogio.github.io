@@ -110,10 +110,10 @@ menu:
     #   name: tags
     #   url: /tags/
       # weight: 40
-    - identifier: schedule
-      name: schedule
-      url: /schedule/
-      weight: 2
+    # - identifier: schedule
+    #   name: schedule
+    #   url: /schedule/
+    #   weight: 2
     # - identifier: search
     #   name: search
     #   url: /search/

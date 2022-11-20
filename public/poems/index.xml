@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Poems on Giorgio Grigolo</title>
+    <link>grigolo.mt/poems/</link>
+    <description>Recent content in Poems on Giorgio Grigolo</description>
+    <image>
+      <url>grigolo.mt/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>grigolo.mt/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 29 Jan 2022 11:30:03 +0000</lastBuildDate><atom:link href="grigolo.mt/poems/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Senza nome</title>
+      <link>grigolo.mt/poems/senzanome/</link>
+      <pubDate>Sat, 29 Jan 2022 11:30:03 +0000</pubDate>
+      
+      <guid>grigolo.mt/poems/senzanome/</guid>
+      <description>A poem written around the beginning of 2022. First writing in Italian, first poem read to public, at the Lords private signing event on the 28th of March.</description>
+    </item>
+    
+  </channel>
+</rss>

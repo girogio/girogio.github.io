@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Writeups on Giorgio Grigolo</title>
+    <link>grigolo.mt/writeup/</link>
+    <description>Recent content in Writeups on Giorgio Grigolo</description>
+    <image>
+      <url>grigolo.mt/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>grigolo.mt/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="grigolo.mt/writeup/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>kvant</title>
+      <link>grigolo.mt/writeup/misc/kvant/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>grigolo.mt/writeup/misc/kvant/</guid>
+      <description>We all know that quantum computing is the future, so in order to practice my quantum computing skills, I have built my own encoding scheme, then I used it to hide the flag, can you recover it!
+kvant.py enc.txt This challenge was in the misc category of the first GDG Algiers CTF due to involving quantum computing. In my opinion, a well founded knowledge of cryptography is useful in this challenge as shown later.</description>
+    </item>
+    
+  </channel>
+</rss>

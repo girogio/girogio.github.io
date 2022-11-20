@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Talks on Giorgio Grigolo</title>
+    <link>grigolo.mt/talks/</link>
+    <description>Recent content in Talks on Giorgio Grigolo</description>
+    <image>
+      <url>grigolo.mt/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>grigolo.mt/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 09 Sep 2022 11:30:03 +0000</lastBuildDate><atom:link href="grigolo.mt/talks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A t|ket&gt; Implementation of Shor&#39;s Algorithm</title>
+      <link>grigolo.mt/talks/shors-algorithm/</link>
+      <pubDate>Fri, 09 Sep 2022 11:30:03 +0000</pubDate>
+      
+      <guid>grigolo.mt/talks/shors-algorithm/</guid>
+      <description>I presented the project our team took on for the Qalypso 2022 Summer School on Quantum Computation Hackathon. </description>
+    </item>
+    
+    <item>
+      <title>An Introduction to Combinatory Logic</title>
+      <link>grigolo.mt/talks/combinatory-logic/</link>
+      <pubDate>Wed, 17 Aug 2022 13:14:18 +0200</pubDate>
+      
+      <guid>grigolo.mt/talks/combinatory-logic/</guid>
+      <description>Alexander Farrugia and I decided to collaborate for the second Summer of Math Exposition organised by Grant Sanderson!</description>
+    </item>
+    
+    <item>
+      <title>Rubik&#39;s Cubes with a sprinkle of combinatorics and group theory.</title>
+      <link>grigolo.mt/talks/rubiks/</link>
+      <pubDate>Tue, 15 Feb 2022 11:30:03 +0000</pubDate>
+      
+      <guid>grigolo.mt/talks/rubiks/</guid>
+      <description>A short talk given during a &amp;#39;Quick fire Talk&amp;#39; organized by the Malta Mathematical Society.</description>
+    </item>
+    
+  </channel>
+</rss>

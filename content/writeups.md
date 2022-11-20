@@ -21,7 +21,8 @@ cover:
     hidden: true # only hide on current single page
 ---
 
-<details open>
+
+<details>
 <summary>Misc</summary>
 
 &emsp;&emsp; <a href='/writeup/misc/kvant'>kvant</a>

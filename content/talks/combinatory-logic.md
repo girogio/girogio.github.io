@@ -33,8 +33,3 @@ Alexander Farrugia is a senior lecturer at the [Junior College](https://www.jc.u
 
 After giving a talk at an event hosted by the [Malta Mathematical Society](facebook.com/maltamathsoc), a couple of years back from the writing of this article, Alex managed to pique my interest on the topic. Fast forward to the date of writing of this article, Alex taught me the basics of combinatory logic and we produced an animation using  [Manim](https://github.com/3b1b/manim) –  an engine for precise programmatic animations, designed for creating explanatory math videos. 
 
-It is safe to say, that currently, on this island, only Alex and myself hold some degree of knowledge on combinatory logic. We aimed to change that by participating in the [Summer of Math Exposition #2](https://summerofmathexposition.substack.com/p/the-summer-of-math-exposition-is?s=rs) so that we can *expose* the topic, to a wider range of people, using friendly and understandable (*hopefully*) animations.
-
-
-
-

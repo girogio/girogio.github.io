@@ -1,0 +1,55 @@
+baseURL = "https://grigolo.mt"
+
+# Change the default theme to be use when building the site with Hugo
+theme = "LoveIt"
+
+# website title
+title = "Giorgio grigolo"
+
+# language code ["en", "zh-CN", "fr", "pl", ...]
+languageCode = "en"
+# language name ["English", "简体中文", "Français", "Polski", ...]
+languageName = "English"
+
+# Author config
+[author]
+name = "Giorgio Grigolo"
+email = "giorgiogrigolo03@gmail.com"
+link = ""
+
+# Menu config
+[menu]
+[[menu.main]]
+weight = 1
+identifier = "info"
+pre = ""
+post = ""
+name = "info/"
+url = "/info/"
+title = "info"
+
+[[menu.main]]
+weight = 2
+identifier = "posts"
+pre = ""
+post = ""
+name = "articles/"
+url = "/articles/"
+title = "posts"
+
+[[menu.main]]
+weight = 3
+identifier = "pgp"
+pre = " "
+post = ""
+name = "pgp/"
+url = "/pgp/"
+title = "pgp"
+
+
+#  Markup related configuration in Hugo
+[markup]
+# Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
+[markup.highlight]
+# false is a necessary configuration (https://github.com/dillonzq/LoveIt/issues/158)
+noClasses = false
